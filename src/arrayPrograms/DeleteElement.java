@@ -5,7 +5,7 @@ public class DeleteElement {
 	public static void main(String[] args) {
 		//finding index of a element 
 		int [] arr = {10,30,80,4,5};
-		int element = 80;
+		int element = 100;
 		int temp = 0;
 		for(int i = 0;i<arr.length;i++) {
 			if(arr[i]==element) {
