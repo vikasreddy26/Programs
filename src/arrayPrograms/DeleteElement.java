@@ -10,7 +10,7 @@ public class DeleteElement {
 		for(int i = 0;i<arr.length;i++) {
 			if(arr[i]==element) {
 				System.out.println("element position: : "+i);
-				temp = temp+1;
+				temp++;
 			}
 		}
 		if(temp ==0)
