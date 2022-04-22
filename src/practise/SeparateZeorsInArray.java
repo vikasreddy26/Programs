@@ -20,10 +20,10 @@ public class SeparateZeorsInArray {
 	            }
 	        } 
 	        //Assigning zero to remaining elements	 
-	        while (counter < inputArray.length)
+	        for(int i=counter;i<inputArray.length; i++)
 	        {
-	            inputArray[counter] = 0; 
-	            counter++;
+	              inputArray[counter] = 0; 
+	              counter++;
 	        }	 
 	        System.out.println(Arrays.toString(inputArray));
 	    }
@@ -44,10 +44,9 @@ public class SeparateZeorsInArray {
 	            }
 	        }	
 	        //Assigning 0 to remaining elements	 
-	        while (counter >= 0)
+	        for(int i=counter;i>=0; i--)
 	        {
-	            inputArray[counter] = 0;
-	 
+	            inputArray[counter] = 0;	 
 	            counter--;
 	        }	 
 	        System.out.println(Arrays.toString(inputArray));

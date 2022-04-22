@@ -80,7 +80,7 @@ public class LambdaFunctions {
 		Collections.sort(list11, (s1, s2) -> {
 			if (s1.price == s2.price)
 				return 0;
-			else if (s1.price > s2.price)
+			else if (s1.price < s2.price)
 				return 1;
 			else
 				return -1;
@@ -92,8 +92,8 @@ public class LambdaFunctions {
 		List<Product> filter = list11.stream().filter(k -> k.price >= 26000).collect(Collectors.toList());
 		// we can use "and" & "or" methods for multiple condition checks
 		// list11.stream().filter(k->k.price>=26000).forEach(System.out::println);
-		list11.stream().filter(f -> f.price > 15000).map(e -> e.price).forEach(System.out::println);
 		System.out.println(filter);
+		list11.stream().filter(f -> f.price > 15000).map(e -> e.price).forEach(System.out::println);
 
 		List<Integer> lista = Arrays.asList(1, 2, 3);
 		List<Integer> listb = Arrays.asList(4, 5, 6);
@@ -238,7 +238,7 @@ public class LambdaFunctions {
 		map.put("ten", 10);
 		map.put("two", 2);
 		Set<Entry<String, Integer>> entries = map.entrySet();
-		System.out.println(entries);
+		// System.out.println(entries);
 		/*
 		 * for(Entry entry:entries) {
 		 * 
@@ -246,6 +246,7 @@ public class LambdaFunctions {
 		 */
 
 		ArrayList<Entry<String, Integer>> ar = new ArrayList<Entry<String, Integer>>(entries);
+		System.out.println(ar);
 		Collections.sort(ar, (o1, o2) -> o1.getValue().compareTo(o2.getValue()));
 		System.out.println(ar);
 		map.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
@@ -296,9 +297,6 @@ public class LambdaFunctions {
 		 * set.add("Three"); set.add("Four"); set.add("Five"); System.out.println(set);
 		 */
 
-		
-		 
-		 
 	}
 
 }
